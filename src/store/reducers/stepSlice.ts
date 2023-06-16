@@ -21,5 +21,5 @@ const stepSlice= createSlice({
     }
 })
 
-export default userSlice.reducer
-export const {setPhone,setEmail}=userSlice.actions
+export default stepSlice.reducer
+export const {setStep}=stepSlice.actions

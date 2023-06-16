@@ -14,13 +14,18 @@ const initialState:UserInfo={
     name:"user_info",
     initialState,
     reducers:{
-        setInfo(state,action:PayloadAction<UserInfo>){
-            const {phone,email}=action.payload
+        setPhone(state,action:PayloadAction<Pick<UserInfo, "phone">>){
+
+            const {phone}=action.payload
             state.phone=phone
+        },
+        setEmail(state,action:PayloadAction<Pick<UserInfo, "email">>){
+
+            const {email}=action.payload
             state.email=email
         }
     }
 })
 
 export default userSlice.reducer
-export const {setInfo}=userSlice.actions
+export const {setPhone,setEmail}=userSlice.actions
